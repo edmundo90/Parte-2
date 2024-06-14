@@ -1,0 +1,281 @@
+body{
+    font-family: 'Teko', 'sans-serif';
+    margin: 0;
+
+}
+/*----------------------------------------------------HEADER!----------------------------------------------------*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(35, 146, 50);
+    gap:12%;
+}
+
+.title{
+    width: 500px;
+    align-items: flex-start;
+    justify-items: center;
+}
+
+header h1{
+    font-family: "Dancing Script", "cursive";
+    font-weight: 600;
+}
+
+header h2{
+    font-size: 15px;
+}
+
+header img{
+    height: 10em;
+    padding: 10px;
+}
+
+header div ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    list-style: none;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+header div ul a, li{
+    color: white;
+    
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nav-bar p{
+    font-size: 30px;
+}
+
+
+/*----------------------------------------------------BODY!----------------------------------------------------*/
+
+
+body{
+    background-image: url('/img/body/bolsaConGranos.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+            /*----------------                    PAGE:INDEX-GRID              -----------------------------*/
+
+.main-img1{
+    width: 250px;
+    grid-area: main-img1;
+    margin-left: 15%;
+    margin-bottom: 1em;
+    margin-top: 10px;
+}
+
+.main-img2{
+    width: 70%;
+    height: 500px;
+    grid-area: main-img2;
+    justify-self: center;
+}
+
+.item3{
+    grid-area: item3;
+    align-self: baseline;
+    font-size: 80px;
+    color: green;
+}
+
+.item4{
+    grid-area: item3;
+    justify-self: center;
+    font-size: 50px;
+    color: white;
+}
+
+.item5{
+    grid-area: item3;
+    justify-self: end;
+    align-self: flex-end;
+    font-size: 50px;
+    
+}
+.item6{
+    grid-area: item5;
+    justify-self: start;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2fr, 1fr, 1fr, 2fr, 6fr;
+    grid-template-areas: "main-img1 null" 
+                         "main-img2 item3"
+                         "main-img2 item4"
+                         "main-img2 item6"
+                         "main-img2 item5";
+                         padding: 10px;
+}
+            /*---------------------------------- PAGE: CONTACTO ---------------------------------------*/
+main div{
+    display: flex;
+    flex-direction:column;
+}
+
+main img{
+    width: 20%;
+    padding: 10px;
+    align-self: center;
+}
+
+
+
+.form{
+    background-color: grey;
+    height: 100%;
+    padding: 30px;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.datosemp{
+    grid-area: datosemp;
+}
+
+.datosrep{
+    grid-area: datosrep;
+}
+
+.datoscon{
+    grid-area: datoscon;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: repeat(2,6fr);
+    grid-template-rows: 4fr, 4fr, 4fr;
+    grid-template-areas: "datosemp chkbx1"
+                         "datoscon chkbx2"
+                         "datosrep btn";
+}
+
+input{
+    width: 180px;
+}
+
+.btn{
+    height: 20px;
+    width: 80px;
+    align-self: flex-start;
+    justify-self: center;
+}
+
+        /*--------------------------------------PAGE:PRODUCTOS------------------------------------------*/
+
+.productos{
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------------------------------------------FOOTER!----------------------------------------------------*/
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100px;
+    gap: 50px;
+}
+
+footer img{
+    border-radius: 130px;
+    width: 60px;
+}
+
+/*------------------------------------------------BOOTSTRAP------------------------------------------------------*/
+
+@media(max-width: 425px)
+{
+    header{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 12fr;
+        grid-template-rows: 12fr;
+        grid-template-areas:"main-img1" 
+                            "main-img2"
+                            "item3"
+                            "item4"
+                            "item5"
+                            "item6";
+                            padding: 5px;
+    }
+
+    .main-img1{
+        width: 250px;
+        grid-area: main-img1;
+        margin-left: 15%;
+        margin-bottom: 1em;
+        margin-top: 10px;
+    }
+    
+    .main-img2{
+        width: 70%;
+        height: 500px;
+        grid-area: main-img2;
+        justify-self: center;
+    }
+    
+    .item3{
+        grid-area: main-img1;
+        font-size: 80px;
+        color: green;
+    }
+    
+    .item4{
+        grid-area: item3;
+        justify-self: center;
+        font-size: 50px;
+        color: white;
+    }
+    
+    .item5{
+        grid-area: item3;
+        justify-self: end;
+        align-self: flex-end;
+        font-size: 50px;
+        
+    }
+    .item6{
+        grid-area: item3;
+        justify-self: start;
+    }
+
+}
+
+@media(max-width: 768px)
+{
+    *{
+        color: yellow;
+    }
+    
+
+}
+
+@media(max-width: 1024px)
+{
+    *{
+        color: red;
+    }
+}
